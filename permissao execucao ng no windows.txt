@@ -1,0 +1,3 @@
+Uma alternativa de corrigir o problema é executar o comando abaixo dentro do Prompt de Comando
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
