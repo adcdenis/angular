@@ -3,10 +3,7 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-  {{valor}}
-  <button (click)="adicionar()">Adicionar</button>
-  <app-title title="Input test"></app-title>
-  <app-data-binding></app-data-binding>
+  <app-diretivas-estruturais></app-diretivas-estruturais>
   <router-outlet></router-outlet>`
 })
 export class AppComponent implements OnInit, OnChanges {
