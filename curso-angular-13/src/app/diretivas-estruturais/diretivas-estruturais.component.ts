@@ -8,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class DiretivasEstruturaisComponent implements OnInit {
   public condition: boolean = true;
   public conditionClick: boolean = true;
-  public list: Array<{ nome : string}> = [{ nome : "Luis"}, { nome : "João"}, { nome : "Lucas"}];
+  public list: Array<{ nome : string, idade:number}> = [{ nome : "Luis", idade: 20}, { nome : "João", idade: 25}, { nome : "Lucas", idade: 40}];
+  public nome:string = 'Denis';
   constructor() {}
 
   ngOnInit(): void {
@@ -21,5 +22,13 @@ export class DiretivasEstruturaisComponent implements OnInit {
   public onClick() {
     if (this.conditionClick) this.conditionClick = false;
     else this.conditionClick = true;
+  }
+
+  public onClickAddList() {
+   this.list.push({ nome : "Antonio", idade: 44});
+  }
+
+  public onclickEventList(i:number) {
+    this.list.splice(i, 1)
   }
 }
