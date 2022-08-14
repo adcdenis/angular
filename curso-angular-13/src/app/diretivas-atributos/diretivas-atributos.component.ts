@@ -9,6 +9,14 @@ export class DiretivasAtributosComponent implements OnInit {
   public valor: boolean = true;
   public heightPix: string = '20px';
   public backgroundColor: string = 'blue';
+
+  public nome: string = '';
+  public list: Array<{ nome: string }> = [
+    { nome: 'Antonio' },
+    { nome: 'Luiz' },
+    { nome: 'José' },
+  ];
+
   constructor() {}
 
   ngOnInit(): void {
@@ -30,7 +38,13 @@ export class DiretivasAtributosComponent implements OnInit {
       } else {
         this.backgroundColor = 'blue';
       }
-
     }, 2000);
   }
+
+  public salvar() {
+    this.list.push({nome: this.nome})
+    this.nome = "";
+
+  }
+
 }

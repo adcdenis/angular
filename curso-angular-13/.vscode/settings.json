@@ -1,0 +1,28 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        ".angular/cache/14.1.1": true,
+        ".angular/cache": true,
+        ".angular": true,
+        ".vscode": true
+    },
+    "explorerExclude.backup": {
+        "**/.git": false,
+        "**/.svn": false,
+        "**/.hg": false,
+        "**/CVS": false,
+        "**/.DS_Store": false,
+        "**/Thumbs.db": false
+    },
+    "hide-files.files": [
+        ".angular/cache/14.1.1",
+        ".angular/cache",
+        ".angular",
+        ".vscode"
+    ]
+}
