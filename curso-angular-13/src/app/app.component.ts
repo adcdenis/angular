@@ -11,13 +11,15 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 
 
-    <app-output (enviarDados)="setDados($event)"> </app-output>
+    <!-- <app-output (enviarDados)="setDados($event)"> </app-output>
 
     <ng-template [ngIf]="dadosRecebidos">
       <h1>{{dadosRecebidos.nome}}</h1>
       <h1>{{dadosRecebidos.idade}}</h1>
 
-    </ng-template>
+    </ng-template> -->
+
+    <app-food-list></app-food-list>
 
     <router-outlet></router-outlet>`,
 })

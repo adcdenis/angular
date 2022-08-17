@@ -1,0 +1,18 @@
+ng build --configuration production --aot
+
+https://adcdenis.github.io/todoangular/
+
+-------------------------------------------------
+
+--para gerar build para o github pages
+
+ng build --configuration production --aot --base-href="/todoangular/"
+
+angular-cli-ghpages --dir=dist/app-todo
+
+
+--------------------
+
+https://adcdenis.github.io/todoangular/
+
+
