@@ -36,9 +36,9 @@ export class AppComponent implements OnInit, OnChanges {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      console.log('teste canuto');
-    }, 5000);
+    // setTimeout(() => {
+    //   console.log('teste canuto');
+    // }, 5000);
   }
 
   public adicionar(): number {

@@ -1,0 +1,36 @@
+{
+  "list-food": [
+    {
+      "id": 0,
+      "nome": "X-Bacon"
+    },
+    {
+      "id": 1,
+      "nome": "X-Salada"
+    },
+    {
+      "id": 2,
+      "nome": "Feijão"
+    },
+    {
+      "id": 3,
+      "nome": "Ovo"
+    },
+    {
+      "nome": "canuto",
+      "id": 4
+    },
+    {
+      "nome": "Isadora",
+      "id": 5
+    },
+    {
+      "nome": "Isadora",
+      "id": 6
+    },
+    {
+      "nome": "aa",
+      "id": 7
+    }
+  ]
+}
