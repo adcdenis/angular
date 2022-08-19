@@ -9,22 +9,40 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-list.component.scss'],
 })
 export class FoodListComponent implements OnInit {
-
-  public foodList: Array<FoodList> =  [];
+  public foodList: Array<FoodList> = [];
 
   constructor(private foodListService: FoodListService) {}
 
   ngOnInit(): void {
     this.foodListService.getLista().subscribe(
-      (res) => this.foodList = res,
+      (res) => (this.foodList = res),
       (error) => error
     );
-    console.log('chegou aqui');
 
     this.foodListService.emitEvent.subscribe({
-      next: (res: any) => alert(res),
+      next: (res: FoodList) => {
+        //alert(res.nome);
+        return this.foodList.push(res);
+      },
       error: (err: any) => console.log(err),
     });
+  }
 
+  public delete(id: number) {
+    this.foodListService.foodListDelete(id).subscribe({
+      next: (res: FoodList) => {
+        return (this.foodList = this.foodList.filter((item) => {
+          return id !== item.id;
+        }));
+      },
+      error: (err: any) => console.log(err),
+    });
+  }
+
+  public edit(food: FoodList) {
+    this.foodListService.foodListPut(food.nome, food.id).subscribe({
+      next: (res: FoodList) => console.log(res),
+      error: (err: any) => console.log(err),
+    });
   }
 }

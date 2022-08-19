@@ -13,7 +13,7 @@ export class FoodAddComponent implements OnInit {
 
   public adicionarValorInput(valor: string) {
     return this.foodListService.foodListAdd(valor).subscribe({
-      next: (res: any) => console.log(res),
+      next: (res: any) => this.foodListService.foodListAlert(res),
       error: (err: any) => console.log(err),
     });
   }

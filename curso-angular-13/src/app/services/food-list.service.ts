@@ -26,13 +26,30 @@ export class FoodListService {
     );
   }
 
-  // public foodListAdd(valor: string) {
-  //   this.emitEvent.emit(valor);
-  //   return this.lista.push(valor);
-  // }
+  public foodListAlert(valor: string) {
+    this.emitEvent.emit(valor);
+  }
 
   public foodListAdd(valor: string): Observable<FoodList> {
-    return this.http.post<FoodList>(`${this.url}list-food`, { nome: valor}).pipe(
+    return this.http
+      .post<FoodList>(`${this.url}list-food`, { nome: valor })
+      .pipe(
+        (res) => res,
+        (error) => error
+      );
+  }
+
+  public foodListPut(valor: string, id: number): Observable<FoodList> {
+    return this.http
+      .put<FoodList>(`${this.url}list-food/${id}`, { nome: valor })
+      .pipe(
+        (res) => res,
+        (error) => error
+      );
+  }
+
+  public foodListDelete(id: number): Observable<FoodList> {
+    return this.http.delete<FoodList>(`${this.url}list-food/${id}`).pipe(
       (res) => res,
       (error) => error
     );
