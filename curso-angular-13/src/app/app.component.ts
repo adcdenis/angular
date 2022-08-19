@@ -19,7 +19,9 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
     </ng-template> -->
 
-    <app-food-list></app-food-list>
+    <!-- <app-food-list></app-food-list> -->
+
+    <app-forms></app-forms>
 
     <router-outlet></router-outlet>`,
 })

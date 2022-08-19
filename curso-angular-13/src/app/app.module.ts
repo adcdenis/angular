@@ -9,6 +9,7 @@ import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DiretivasAtributosComponent } from './diretivas-atributos/diretivas-atributos.component';
 import { DiretivasEstruturaisComponent } from './diretivas-estruturais/diretivas-estruturais.component';
 import { TitleComponent } from './title/title.component';
+import { FormsComponent } from './forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TitleComponent } from './title/title.component';
     TitleComponent,
     DataBindingComponent,
     DiretivasEstruturaisComponent,
-    DiretivasAtributosComponent
+    DiretivasAtributosComponent,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
