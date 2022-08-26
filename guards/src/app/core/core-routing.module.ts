@@ -1,7 +1,7 @@
 import { LeadsComponent } from './pages/leads/leads.component';
 import { DashBoardComponent } from './pages/dash-board/dash-board.component';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivateChild } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'leads',
-    component: LeadsComponent,
+    component: LeadsComponent
   },
 ];
 
