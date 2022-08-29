@@ -1,6 +1,6 @@
 <div class="container">
   <img src="./assets/logo.png" alt="Logo da Empresa" />
-  <form [formGroup]="formAuth" (ngSubmit)="submit()">
+  <form [formGroup]="formAuth" (ngSubmit)="submitForm()">
     <label>
       <svg
         width="20"
@@ -47,5 +47,5 @@
     <button class="btn-vermelho" [disabled]="formAuth.invalid">Login</button>
   </form>
 
-  <!-- <span class="msg-error" *ngIf="msgError">{{ msgError }}</span> -->
+  <span class="msg-error" *ngIf="msgError">{{ msgError }}</span>
 </div>
