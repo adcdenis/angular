@@ -15,10 +15,13 @@ export class AuthService {
     password: string;
   }): Observable<any> {
     return this.http.post(`${this.url}/sign`, payLoad).pipe(
-      map((data) => console.log(data)),
-      catchError((err) => {
-        console.log(err);
-        return throwError(() => err.error.message);
+      map((res) => console.log(res)),
+      catchError((e) => {
+        console.log(e);
+
+        if (e.error.message) return throwError(() => e.error.message);
+
+        return throwError(() => 'Serviço de autenticação indisponível!');
       })
     );
   }

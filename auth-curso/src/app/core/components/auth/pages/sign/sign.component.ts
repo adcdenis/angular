@@ -24,7 +24,7 @@ export class SignComponent implements OnInit {
 
     if (this.formAuth.valid) {
       this.auth.sign(this.formAuth.value).subscribe({
-        next: (res) => res,
+        next: (res) => this.msgError = '',
         error: (e) => this.msgError = e,
       });
       console.log(this.formAuth);
