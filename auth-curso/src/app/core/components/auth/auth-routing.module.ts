@@ -1,5 +1,4 @@
 import { SignComponent } from './pages/sign/sign.component';
-import { HomeComponent } from './../../../components/admin/pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -11,7 +10,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(routes)
+  ],
   exports: [RouterModule],
 })
 export class AuthRoutingModule {}
