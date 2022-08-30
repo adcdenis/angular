@@ -1,0 +1,17 @@
+<p>
+  <strong>Olá Denis</strong><br><br>
+  Ag: 3488 cc: 116744
+</p>
+
+<p>
+  Poupança: R$ {{valorPoupanca}}
+  <br>
+  <input type="number" #valorASacar>
+  <button (click)="sacar(valorASacar.value)">Sacar</button>
+</p>
+<p>
+  Carteira: R$ {{valorCarteira}}
+  <br>
+  <input type="number" #valorADepositar>
+  <button (click)="daCarteiraParaPoupanca(valorADepositar.value)">Depositar</button>
+</p>
