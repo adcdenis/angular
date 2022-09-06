@@ -13,7 +13,7 @@ export class BankingComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  public sacar(valor: string): number | undefined {
+  public sacarDaPoupanca(valor: string): number | undefined {
 
     const valorN = Number(valor);
 
