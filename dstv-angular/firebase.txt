@@ -1,0 +1,37 @@
+Registrar app
+2
+Adicionar o SDK do Firebase
+
+Usar o npm
+
+Usar a tag <script>
+Se você já estiver usando o npm e um bundler de módulo, como webpack ou Rollup, execute o seguinte comando para instalar o SDK mais recente:
+
+npm install firebase
+Depois inicialize o Firebase e comece a usar os SDKs dos produtos.
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAhnu0xDYYkPWgwYWF_bU9cwF5j5nAkPFY",
+  authDomain: "dstv-5b72b.firebaseapp.com",
+  databaseURL: "https://dstv-5b72b-default-rtdb.firebaseio.com",
+  projectId: "dstv-5b72b",
+  storageBucket: "dstv-5b72b.appspot.com",
+  messagingSenderId: "106184534009",
+  appId: "1:106184534009:web:b86b6818a9cec3476abf28"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+Observação: essa opção usa o SDK modular para JavaScript, que reduz o tamanho do SDK.
+
+Saiba mais sobre o Firebase para Web: Vamos começar, Referência da API Web SDK, Amostras
+
+
+
+https://dstv-5b72b-default-rtdb.firebaseio.com/plano.json
