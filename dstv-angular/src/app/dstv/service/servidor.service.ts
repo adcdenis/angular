@@ -7,26 +7,22 @@ import { ServidorI } from '../api/dstvInterfaces';
     providedIn: 'root',
 })
 export class ServidorService {
-    private url =
-        'https://dstv-5b72b-default-rtdb.firebaseio.com/servidor';
+    private url = 'https://dstv-5b72b-default-rtdb.firebaseio.com/servidor';
 
     constructor(private http: HttpClient) {}
 
     public listar(): Observable<any> {
         return this.http.get(`${this.url}.json`).pipe(
+            tap((v) => console.log('no tap:', v)),
             map((res: any, index) => {
                 let listaServidores: Array<ServidorI> = [];
-                //console.log('listaServidores: ', listaServidores);
 
                 for (const id in res) {
-                    //console.log('id: ', id);
-                    //console.log('inserindo: ', res[id]);
-                    const servidor : ServidorI = res[id];
+                    const servidor: ServidorI = res[id];
                     servidor.id = id;
                     let i = listaServidores.push(servidor);
-                    //console.log('listaServidores: ', listaServidores);
-                    //console.log('i: ', i);
                 }
+                console.log('listaServidores: ', listaServidores);
                 return listaServidores;
             })
         );
